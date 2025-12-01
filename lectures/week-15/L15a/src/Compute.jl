@@ -98,7 +98,6 @@ function recover(model::MyClassicalHopfieldNetworkModel, sₒ::Array{Int32,1}, t
         
         j = rand(1:number_of_pixels); # select a random pixel
         w = W[j,:]; # get the weights
-        old_sj = s[j];
         h = dot(w,s) - b[j]; # state at node j
         
         # Edge case: if h == 0, we have a tie, so we randomly assign ±1
